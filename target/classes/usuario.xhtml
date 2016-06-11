@@ -1,0 +1,81 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+
+    </h:head>
+
+    <h:body>
+        <p:growl id="msg"></p:growl>
+        <h:form>
+            <p:panel header="Formulario del Usuario" id="pnlFormularioUsuario">
+                <h:panelGrid columns="2" border="0">
+
+                    <p:outputLabel value="ID"/>
+                    <p:inputText id="txtCedula" binding="#{usuarioVista.txtCedula}">
+                        <p:ajax
+                            listener="#{usuarioVista.txtIdentificacionListener}"
+                            update="pnlFormularioUsuario"/>
+                    </p:inputText>
+
+                    <p:outputLabel value="Tipo Usuario"/>
+                    <p:selectOneMenu id="secTipoUsuario" binding="#{usuarioVista.secTipoUsuario}">
+                        <f:selectItem itemValue="-1" itemLabel="-Seleccione-"/>
+                        <f:selectItems value="#{usuarioVista.losTiposUsuarioItem}"/>
+                    </p:selectOneMenu>
+
+                    <p:outputLabel value="Nombre" />
+                    <p:inputText id="txtNombre" binding="#{usuarioVista.txtNombre}">
+                    </p:inputText>
+
+                    <p:outputLabel value="Login" />
+                    <p:inputText id="txtLogin" binding="#{usuarioVista.txtLogin}">
+                    </p:inputText>
+
+                    <p:outputLabel value="Clave" />
+                    <p:inputText id="txtClave" binding="#{usuarioVista.txtClave}">
+                    </p:inputText>
+
+                </h:panelGrid>
+
+                <h:panelGrid columns="4" border="0" id="pnlBotones">
+
+                    <p:commandButton
+                        id="btnCrear"
+                        value="Crear"
+                        update="msg"
+                        binding="#{usuarioVista.btnCrear}"
+                        disabled="true"
+                        action="#{usuarioVista.crearAction}"/>
+
+                    <p:commandButton
+                        id="btnModificar"
+                        value="Modificar"
+                        update="msg"
+                        binding="#{usuarioVista.btnModificar}"
+                        disabled="true"
+                        action="#{usuarioVista.modificarAction}"/>
+
+                    <p:commandButton
+                        id="btnBorrar"
+                        value="Borrar"
+                        update="msg"
+                        binding="#{usuarioVista.btnBorrar}"
+                        disabled="true"
+                        action="#{usuarioVista.borrarAction}"/>
+
+                    <p:commandButton
+                        id="btnLimpiar"
+                        value="Limpiar"
+                        update="msg, pnlFormularioUsuario, pnlBotones"
+                        binding="#{usuarioVista.btnLimpiar}"
+                        disabled="false"
+                        action="#{usuarioVista.limpiarAction}"/>
+
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </h:body>  
+</html> 
