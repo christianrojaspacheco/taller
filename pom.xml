@@ -5,17 +5,18 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
+
 <distributionManagement>
    <repository>
      <id>releases</id>
     <name>releases</name>
-    <url>http://54.213.136.163:8080/nexus-webapp-2.10.0-02/content/repositories/releases/</url>
+    <url>http://localhost:8080/nexus-webapp-2.10.0-02/content/repositories/releases/</url>
   </repository>
 
   <snapshotRepository>
      <id>snapshots</id>
     <name>Internal Snapshots</name>
-    <url>http://54.213.136.163:8080/nexus-webapp-2.10.0-02/content/repositories/snapshots/</url>
+    <url>http://localhost:8080/nexus-webapp-2.10.0-02/content/repositories/snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
