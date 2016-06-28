@@ -13,7 +13,7 @@
   </repository>
 
   <snapshotRepository>
-     <id>nexus-snapshots</id>
+     <id>snapshots</id>
     <url>http://127.0.0.1:8081/nexus-webapp-2.13.0-01/content/repositories/snapshots</url>
     </snapshotRepository>
 </distributionManagement>
