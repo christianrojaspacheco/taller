@@ -10,13 +10,13 @@
    <repository>
      <id>releases</id>
     <name>releases</name>
-    <url>http://localhost:8080/nexus-webapp-2.10.0-02/content/repositories/releases/</url>
+    <url>http://127.0.0.1:8081/nexus-webapp-2.13.0-01/content/repositories/releases/</url>
   </repository>
 
   <snapshotRepository>
      <id>snapshots</id>
     <name>Internal Snapshots</name>
-    <url>http://localhost:8080/nexus-webapp-2.10.0-02/content/repositories/snapshots/</url>
+    <url>http://127.0.0.1:8081/nexus-webapp-2.13.0-01/content/repositories/snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 
