@@ -102,7 +102,7 @@ public class CuentaLogicaTest {
 		cuentaLogica.borrar(cuenta);
 	}
 	
-	@Test
+    @Test
 	@Transactional(readOnly=true)
 	public void etest()throws Exception {
 		List<Cuentas> losDatos=cuentaLogica.consultarTodos();
