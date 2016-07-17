@@ -1,20 +1,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
     xmlns:h="http://java.sun.com/jsf/html"
     xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
 
     <h:head>
 
     </h:head>
 
     <h:body>
-
+    
+    <ui:insert id="menu">
+       <ui:include src="/menu.xhtml"/>
+    </ui:insert>
+   
+   <div align="right">
+      <p:commandButton value="Crear Cliente" action="/cliente.xhtml"></p:commandButton>
+   </div>
+   
+   <h3 align="center">Lista de Clientes</h3>
+   
     <h:form>
          <p:dataTable
-            var="cliente"
+            var="cliente" 
             value="#{clienteVista.losClentes}"
             paginator="true"
-            rows="5"
+            rows="7"
             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
             rowsPerPageTemplate="5,10,15">
 
@@ -32,5 +43,7 @@
 
         </p:dataTable>
     </h:form>
+    
+    
     </h:body>
 </html> 

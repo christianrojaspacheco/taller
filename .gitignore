@@ -159,3 +159,5 @@ target/demoWeb-0.0.1-SNAPSHOT/WEB-INF/lib/jackson-core-2.5.1.jar
 target/demoWeb-0.0.1-SNAPSHOT/WEB-INF/lib/jackson-core-asl-1.9.13.jar
 target/demoWeb-0.0.1-SNAPSHOT/WEB-INF/lib/jackson-databind-2.5.1.jar
 target/demoWeb-0.0.1-SNAPSHOT/WEB-INF/lib/jackson-mapper-asl-1.9.13.jar
+/target/
+/bin/

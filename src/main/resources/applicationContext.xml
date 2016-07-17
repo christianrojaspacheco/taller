@@ -9,9 +9,9 @@
 		
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.postgresql.Driver" />
-		<property name="url" value="jdbc:postgresql://postgres.crf6h0vg5ua1.us-west-2.rds.amazonaws.com:5432/banco" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/banco" />
 		<property name="username" value="postgres" />
-		<property name="password" value="postgres123" />
+		<property name="password" value="123456" />
 	</bean>
 	
 	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">

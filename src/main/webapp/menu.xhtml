@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html
+    xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+ <body>
+    <ui:composition>
+      <h:form>
+        <p:growl id="messages"/>
+        <p:menubar>
+            <p:submenu label="Configuración" icon="ui-icon-gear">
+                <p:menuitem value="Usuarios" url="/listaUsuarios.xhtml"/>
+                <p:menuitem value="Clientes" url="/listaClientes.xhtml"/>
+            </p:submenu>
+            
+             <p:submenu label="Transacciones" icon="ui-icon-gear">
+               <p:menuitem value="Nueva" url="/transacciones.xhtml"/>
+            </p:submenu>
+        </p:menubar>
+      </h:form>
+    </ui:composition>
+</body>
+</html>
